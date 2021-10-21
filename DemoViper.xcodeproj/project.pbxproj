@@ -13,6 +13,7 @@
 		47AA2FC22721A06900A96C9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47AA2FC02721A06900A96C9F /* Main.storyboard */; };
 		47AA2FC42721A06A00A96C9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47AA2FC32721A06A00A96C9F /* Assets.xcassets */; };
 		47AA2FC72721A06A00A96C9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47AA2FC52721A06A00A96C9F /* LaunchScreen.storyboard */; };
+		FE1C7EB1776D9EE045E04792 /* Pods_DemoViper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58EF36983DB13E65B8514BAD /* Pods_DemoViper.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		47AA2FC32721A06A00A96C9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47AA2FC62721A06A00A96C9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		47AA2FC82721A06A00A96C9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58EF36983DB13E65B8514BAD /* Pods_DemoViper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoViper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE0B2FB74907440DC3195894 /* Pods-DemoViper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoViper.release.xcconfig"; path = "Target Support Files/Pods-DemoViper/Pods-DemoViper.release.xcconfig"; sourceTree = "<group>"; };
+		D20350BDD5F32ADDB99F9C90 /* Pods-DemoViper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoViper.debug.xcconfig"; path = "Target Support Files/Pods-DemoViper/Pods-DemoViper.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE1C7EB1776D9EE045E04792 /* Pods_DemoViper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F5445121A20BE51DFA744DB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				58EF36983DB13E65B8514BAD /* Pods_DemoViper.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		47AA2FAE2721A06800A96C9F = {
 			isa = PBXGroup;
 			children = (
 				47AA2FB92721A06900A96C9F /* DemoViper */,
 				47AA2FB82721A06900A96C9F /* Products */,
+				E7B85C2E1A68B2A29F6C00B9 /* Pods */,
+				0F5445121A20BE51DFA744DB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +82,16 @@
 			path = DemoViper;
 			sourceTree = "<group>";
 		};
+		E7B85C2E1A68B2A29F6C00B9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D20350BDD5F32ADDB99F9C90 /* Pods-DemoViper.debug.xcconfig */,
+				BE0B2FB74907440DC3195894 /* Pods-DemoViper.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 47AA2FCB2721A06A00A96C9F /* Build configuration list for PBXNativeTarget "DemoViper" */;
 			buildPhases = (
+				175008893B4D97A7A7EB7B45 /* [CP] Check Pods Manifest.lock */,
 				47AA2FB32721A06800A96C9F /* Sources */,
 				47AA2FB42721A06800A96C9F /* Frameworks */,
 				47AA2FB52721A06800A96C9F /* Resources */,
+				D448455C8A45225942705FAD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		175008893B4D97A7A7EB7B45 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DemoViper-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D448455C8A45225942705FAD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DemoViper/Pods-DemoViper-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DemoViper/Pods-DemoViper-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DemoViper/Pods-DemoViper-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		47AA2FB32721A06800A96C9F /* Sources */ = {
@@ -284,6 +353,7 @@
 		};
 		47AA2FCC2721A06A00A96C9F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D20350BDD5F32ADDB99F9C90 /* Pods-DemoViper.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -312,6 +382,7 @@
 		};
 		47AA2FCD2721A06A00A96C9F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE0B2FB74907440DC3195894 /* Pods-DemoViper.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
