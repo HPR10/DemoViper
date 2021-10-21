@@ -10,7 +10,6 @@
 		47AA2FBB2721A06900A96C9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AA2FBA2721A06900A96C9F /* AppDelegate.swift */; };
 		47AA2FBD2721A06900A96C9F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AA2FBC2721A06900A96C9F /* SceneDelegate.swift */; };
 		47AA2FBF2721A06900A96C9F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AA2FBE2721A06900A96C9F /* ViewController.swift */; };
-		47AA2FC22721A06900A96C9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47AA2FC02721A06900A96C9F /* Main.storyboard */; };
 		47AA2FC42721A06A00A96C9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47AA2FC32721A06A00A96C9F /* Assets.xcassets */; };
 		47AA2FC72721A06A00A96C9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47AA2FC52721A06A00A96C9F /* LaunchScreen.storyboard */; };
 		FE1C7EB1776D9EE045E04792 /* Pods_DemoViper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58EF36983DB13E65B8514BAD /* Pods_DemoViper.framework */; };
@@ -21,7 +20,6 @@
 		47AA2FBA2721A06900A96C9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47AA2FBC2721A06900A96C9F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		47AA2FBE2721A06900A96C9F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		47AA2FC12721A06900A96C9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		47AA2FC32721A06A00A96C9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47AA2FC62721A06A00A96C9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		47AA2FC82721A06A00A96C9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -71,15 +69,46 @@
 		47AA2FB92721A06900A96C9F /* DemoViper */ = {
 			isa = PBXGroup;
 			children = (
-				47AA2FBA2721A06900A96C9F /* AppDelegate.swift */,
-				47AA2FBC2721A06900A96C9F /* SceneDelegate.swift */,
+				47AA2FCE2721AC8600A96C9F /* Application */,
+				47AA2FD12721AE5200A96C9F /* Features */,
+				47AA2FD02721AE4800A96C9F /* Commons */,
+				47AA2FCF2721ACE700A96C9F /* Resources */,
 				47AA2FBE2721A06900A96C9F /* ViewController.swift */,
-				47AA2FC02721A06900A96C9F /* Main.storyboard */,
-				47AA2FC32721A06A00A96C9F /* Assets.xcassets */,
-				47AA2FC52721A06A00A96C9F /* LaunchScreen.storyboard */,
 				47AA2FC82721A06A00A96C9F /* Info.plist */,
 			);
 			path = DemoViper;
+			sourceTree = "<group>";
+		};
+		47AA2FCE2721AC8600A96C9F /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				47AA2FBA2721A06900A96C9F /* AppDelegate.swift */,
+				47AA2FBC2721A06900A96C9F /* SceneDelegate.swift */,
+				47AA2FC52721A06A00A96C9F /* LaunchScreen.storyboard */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		47AA2FCF2721ACE700A96C9F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				47AA2FC32721A06A00A96C9F /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		47AA2FD02721AE4800A96C9F /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		47AA2FD12721AE5200A96C9F /* Features */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Features;
 			sourceTree = "<group>";
 		};
 		E7B85C2E1A68B2A29F6C00B9 /* Pods */ = {
@@ -88,7 +117,6 @@
 				D20350BDD5F32ADDB99F9C90 /* Pods-DemoViper.debug.xcconfig */,
 				BE0B2FB74907440DC3195894 /* Pods-DemoViper.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -154,7 +182,6 @@
 			files = (
 				47AA2FC72721A06A00A96C9F /* LaunchScreen.storyboard in Resources */,
 				47AA2FC42721A06A00A96C9F /* Assets.xcassets in Resources */,
-				47AA2FC22721A06900A96C9F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,14 +243,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		47AA2FC02721A06900A96C9F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				47AA2FC12721A06900A96C9F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		47AA2FC52721A06A00A96C9F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -364,7 +383,6 @@
 				INFOPLIST_FILE = DemoViper/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -393,7 +411,6 @@
 				INFOPLIST_FILE = DemoViper/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
