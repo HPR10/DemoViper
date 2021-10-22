@@ -7,14 +7,17 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MarcasViewController: UIViewController {
+    
+    var presenter: MarcasPresenter?
 
     override func viewDidLoad() {
         super.viewDidLoad()
       
-        view.backgroundColor = .blue
     }
-
-
 }
 
+
+extension MarcasViewController: MarcasContract {
+    
+}
